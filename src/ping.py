@@ -5,7 +5,7 @@ class Ping:
     def __init__(self, ipAddress):
         self.ipAddress = ipAddress  
         self.ping_results = None
-    def ping(self, timeout=0.05):
+    def ping(self, timeout=0.02):
         
         if platform.system() == 'Windows':
             ping_command = ['ping', '-n', '1', self.ipAddress, '-w', str(timeout * 1000)]
